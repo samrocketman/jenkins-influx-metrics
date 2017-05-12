@@ -36,6 +36,10 @@ look something like the following.
 Learn more about [Telegraf configuration][telegraf-conf] or more specifically
 about [Telegraf `inputs.exec`][telegraf-exec].
 
+# Building
+
+    go build
+
 [idb-line-protocol]: https://docs.influxdata.com/influxdb/v1.2/write_protocols/line_protocol_tutorial/
 [jenkins-metrics]: https://wiki.jenkins-ci.org/display/JENKINS/Metrics+Plugin
 [telegraf-conf]: https://github.com/influxdata/telegraf/blob/master/docs/CONFIGURATION.md
