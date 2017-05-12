@@ -7,6 +7,8 @@ ignored and the metric name is derived without `_value`.  If a metric value is a
 `String` then it is completely ignored as a metric entirely.  Only integers and
 floats are surfaced as metrics.
 
+# `metrics` endpoint
+
 ### Gauges
 
 The last CSV field in they key is the key of the fieldset.  All preceding
@@ -86,3 +88,27 @@ For example,
 The above example would turn into the following influx line protocol.
 
     jenkins_health_check_duration count=7i,max=0.0014854870000000002,mean=8.38357636372125E-4,min=3.24028E-4...  etc
+
+# `healthcheck` endpoint
+
+Sample metrics from health check endpoint.
+
+	{
+	  "disk-space" : {
+		"healthy" : true
+	  },
+	  "plugins" : {
+		"healthy" : true,
+		"message" : "No failed plugins"
+	  },
+	  "temporary-space" : {
+		"healthy" : true
+	  },
+	  "thread-deadlock" : {
+		"healthy" : true
+	  }
+	}
+
+Resulting influx line protocol.
+
+	healthcheck_endpoint disk_space_healthy=true,plugins_healthy=true,temporary_space_healthy=true,thread_deadlock_healthy=true
