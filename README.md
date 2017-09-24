@@ -1,5 +1,7 @@
 # Jenkins master metrics for InfluxDB
 
+> WARNING: this project is pre-alpha quality and not ready for use.  When I feel it is ready for use then I'll remove this banner.
+
 A simple program to collect metrics from a Jenkins master and surface the
 metrics as [InfluxDB line protocol][idb-line-protocol].  Written in Go.
 
