@@ -1,8 +1,8 @@
-# Jenkins master metrics for InfluxDB
+# Jenkins server metrics for InfluxDB
 
 > WARNING: this project is pre-alpha quality and not ready for use.  When I feel it is ready for use then I'll remove this banner.
 
-A simple program to collect metrics from a Jenkins master and surface the
+A simple program to collect metrics from a Jenkins server and surface the
 metrics as [InfluxDB line protocol][idb-line-protocol].  Written in Go.
 
 Prereqisites:
@@ -20,7 +20,7 @@ protocol with the following command.
       -metrics-token $METRICS_TOKEN \
       -tag-set 'host=localhost'
 
-Integrating with telegraf to push the Jenkins master metrics to InfluxDB could
+Integrating with telegraf to push the Jenkins server metrics to InfluxDB could
 look something like the following.
 
     # Collect Jenkins metrics every minute
